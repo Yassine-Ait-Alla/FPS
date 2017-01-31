@@ -15,10 +15,10 @@ public class gunDamage : MonoBehaviour
 	
 	void Update ()
 	{
-		if (Input.GetButton("Fire1"))
+		if (Input.GetButtonDown("Fire1"))
 		{
 			RaycastHit		shot;
-			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), shot))
+			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot))
 			{
 				targetDistance = shot.distance;
 				if (targetDistance < AllowedRange)

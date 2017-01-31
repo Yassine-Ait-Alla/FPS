@@ -13,9 +13,9 @@ public class gunFire : MonoBehaviour
 	
 	void Update ()
 	{
-		if (Input.GetButton("Fire1"))
+		if (Input.GetButtonDown("Fire1"))
 		{
-			son.Play();
+	//		son.Play();
 			GetComponent<Animation>().Play("gunShot");
 		}	
 	}
